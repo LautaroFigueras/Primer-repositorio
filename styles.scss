@@ -1,0 +1,260 @@
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    color: purple;
+    font-family: 'Montserrat';
+    min-height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+
+.listaNav{
+    display: flex; 
+    color: purple;
+    font-size: 1.4rem;
+    
+}
+
+
+.caja{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+   
+}
+
+.cajaItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.cajaItem:hover{
+    filter: opacity(0.9);
+  transform: scale(1.04);
+}
+
+
+.redes{
+    background-color: purple;
+    color: gold;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: linear-gradient(to left, purple ,gold);
+
+}
+.redes--nueva{
+    @extend .redes;
+    color: white;
+    flex-direction: initial;
+}
+  
+
+
+
+.bio{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.6rem;
+}
+.noticias{
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+
+.imagenes{
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+p{  
+       font-size: 1.2rem;
+       text-align: center;
+}
+
+h2{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+form{
+    font-size: 1.4rem;
+}
+
+ol{
+    list-style-type: inherit;
+    font-size: 1.4rem;
+}
+
+
+.fondoAmarillo{
+    background-color: gold;
+}
+
+.fondoAmarillo--nuevo{
+    @extend .fondoAmarillo;
+    font-size: 3rem;
+    animation-duration: 4s;
+   animation-name: aparecer;
+
+}
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 
+
+tr{
+    background-color: gold;
+    color: purple;
+}
+
+.usa{
+    color: blue;
+    background-color:white ;
+}
+
+
+ul {
+    display: inline-block;
+ }
+ li {
+    display: inline-block;
+    margin: 0 15px;
+    position:relative;
+    font-size: 14px
+ }
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+    "header"
+    "informacion"
+    "noticias"
+    "imagenes"
+    "compras"
+    "footer";
+    margin: 0;
+    height: 100vh;
+    }
+
+@media (min-width: 768px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "header header"
+        "informacion informacion"
+        "noticias noticias"
+        "imagenes compras"
+        "footer footer";
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "header header header header"
+        ". informacion informacion ."
+        "noticias noticias noticias noticias"
+        "imagenes imagenes compras compras"
+        "footer footer footer footer";
+    }
+}
+
+.listaNav{
+    grid-area: header;
+}
+
+.bio{
+    grid-area: informacion;
+}
+
+.noticias{
+    grid-area: noticias;
+}
+.imagenes{
+    grid-area: imagenes;
+}
+.comprar{
+    grid-area: compras;
+}
+
+.redes{
+    grid-area: footer;
+}
+
+
+.cajaBio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "fondoAmarilo fondoAmarillo fondoAmarillo fondoAmarillo"
+        ". inicios inicios ."
+        ". universidad universidad ."
+        ". nba nba ."
+        ". vida vida ."
+        "footer footer footer footer";;
+    margin: 0;
+    height: 100vh;
+    gap: 30px;
+}
+
+.inicios{
+    font-size: 1.6rem;
+    grid-area: inicios;
+}
+
+
+.uni{
+    grid-area: universidad;
+}
+
+.nba{
+    grid-area: nba ;
+}
+.vida{
+    grid-area: vida;
+}
+
+img{
+   max-width: 100%;
+}
