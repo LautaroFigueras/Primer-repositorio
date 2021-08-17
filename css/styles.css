@@ -14,12 +14,37 @@ a {
   color: purple;
 }
 
+/*                                                                    INDEX                                                                                     */
+.bio {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.6rem;
+}
+
+.noticias {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.imagenes {
+  padding: 10px;
+  font-size: 1.6rem;
+  image-resolution: width="400px" height= "550px";
+}
+
+img {
+  max-width: 100%;
+}
+
 .listaNav {
   display: flex;
   color: purple;
   font-size: 1.4rem;
 }
 
+/*                                                                       IMAGENES                                                                                    */
 .caja {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -27,6 +52,7 @@ a {
   gap: 20px;
   padding: 20px;
   grid-auto-flow: dense;
+  image-resolution: width="380px" height= "450px";
 }
 
 .cajaItem {
@@ -45,6 +71,7 @@ a {
   transform: scale(1.04);
 }
 
+/*                                                                         REDES                                                                                   */
 .redes, .redes--nueva {
   background-color: purple;
   color: gold;
@@ -58,24 +85,18 @@ a {
   flex-direction: initial;
 }
 
-.bio {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  font-size: 1.6rem;
+ul {
+  display: inline-block;
 }
 
-.noticias {
-  font-size: 1.6rem;
-  padding: 10px;
+li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+  font-size: 14px;
 }
 
-.imagenes {
-  padding: 10px;
-  font-size: 1.6rem;
-}
-
+/*                                                                    LETRAS Y TEXTOS                                                                            */
 p {
   font-size: 1.2rem;
   text-align: center;
@@ -84,15 +105,6 @@ p {
 h2 {
   font-size: 1.8rem;
   text-align: center;
-}
-
-form {
-  font-size: 1.4rem;
-}
-
-ol {
-  list-style-type: inherit;
-  font-size: 1.4rem;
 }
 
 .fondoAmarillo, .fondoAmarillo--nuevo {
@@ -114,6 +126,17 @@ ol {
   }
 }
 
+/*                                                                        CONTACTO                                                                                 */
+form {
+  font-size: 1.4rem;
+}
+
+ol {
+  list-style-type: inherit;
+  font-size: 1.4rem;
+}
+
+/*                                                                      TABLA ESTADISTICAS                                                                           */
 tr {
   background-color: gold;
   color: purple;
@@ -124,17 +147,7 @@ tr {
   background-color: white;
 }
 
-ul {
-  display: inline-block;
-}
-
-li {
-  display: inline-block;
-  margin: 0 15px;
-  position: relative;
-  font-size: 14px;
-}
-
+/*                                                                          RESPONSIVE                                                                             */
 .contenedor {
   display: grid;
   grid-template-columns: 100%;
@@ -188,16 +201,6 @@ li {
   grid-area: footer;
 }
 
-.cajaBio {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-areas: "header header header header" "fondoAmarilo fondoAmarillo fondoAmarillo fondoAmarillo" ". inicios inicios ." ". universidad universidad ." ". nba nba ." ". vida vida ." "footer footer footer footer";
-  margin: 0;
-  height: 100vh;
-  gap: 30px;
-}
-
 .inicios {
   font-size: 1.6rem;
   grid-area: inicios;
@@ -213,8 +216,4 @@ li {
 
 .vida {
   grid-area: vida;
-}
-
-img {
-  max-width: 100%;
 }
