@@ -115,6 +115,9 @@ h2 {
   font-size: 3rem;
   animation-duration: 4s;
   animation-name: aparecer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 @keyframes aparecer {
