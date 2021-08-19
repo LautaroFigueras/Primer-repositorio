@@ -139,14 +139,44 @@ h2{
 
 
 /*                                                                        CONTACTO                                                                                 */
+
 form{
-    font-size: 1.4rem;
+    width: 450px;
+    margin: auto;
+    background: rgba($color: gold, $alpha: 1.0);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-bottom: 100%;
+
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton{
+    background: purple;
+    color: gold;
+    padding: 20px;
+}
+#boton:hover{
+    cursor: pointer;
 }
 
-ol{
-    list-style-type: inherit;
-    font-size: 1.4rem;
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
 }
+
 
 
  
