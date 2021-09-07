@@ -28,22 +28,46 @@ a{
         padding: 10px;
     }
     
-    .imagenes{
-        padding: 10px;
-        font-size: 1.6rem;
-        image-resolution: width="400px" height="550px";
-    }
-
     img{
         max-width: 100%;
      }
      
+     .magic{
+        font-size: 3rem;
+    }
+    
+    .magic--nuevo{
+        @extend .magic;
+        font-size: 3rem;
+        animation-duration: 4s;
+        animation-name: aparecer;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    @keyframes aparecer {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+     }
+    
 
 .listaNav{
     display: flex; 
     color: purple;
     font-size: 1.4rem;
     
+}
+
+.hamburguesa{
+    border-color: purple;
+    border-width: 3px;
+}
+.hamburguesa .navbar-toggler-icon{
+   background-color: purple;
 }
 
 /*                                                                       IMAGENES                                                                                    */
@@ -68,22 +92,47 @@ a{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .cajaItem:hover{
     filter: opacity(0.9);
   transform: scale(1.04);
 }
+.cajaItem img{
+    width: 370px; height: 450px; ;
+}
+
+.cajaOtra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cajaOtra:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.cajaOtra img{
+    width: 490px; height: 340px; ;
+}
+
+
 
 
 /*                                                                         REDES                                                                                   */
 .redes{
-    background-color: purple;
-    color: gold;
+    background-color: gold;
+    color: purple;
     display: flex;
-    flex-direction: row-reverse;
-    background-image: linear-gradient(to left, purple ,gold);
+    flex-direction: row-reverse;   
+    padding: 5px
 
 }
 .redes--nueva{
@@ -100,8 +149,11 @@ ul {
     display: inline-block;
     margin: 0 15px;
     position:relative;
-    font-size: 14px
+    font-size: 20px
  }
+
+
+
 
  /*                                                                    LETRAS Y TEXTOS                                                                            */
 p{  
@@ -116,6 +168,7 @@ h2{
 
 .fondoAmarillo{
     background-color: gold;
+    font-size: 3rem;
 }
 
 .fondoAmarillo--nuevo{
@@ -188,10 +241,14 @@ tr{
 }
 
 .usa{
+    padding: 30px;
     color: blue;
     background-color:white ;
 }
 
+.lakers{
+    padding: 30px;
+}
 
 
 
